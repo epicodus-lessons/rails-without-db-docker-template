@@ -1,24 +1,13 @@
-# README
+## Description
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a basic scaffolded Rails application without a database that uses port 3001 to communicate with a Rails API application.
 
-Things you may want to cover:
+To use it, first run the API application template provided here following the instructions in its README: [rails-api-docker-template](https://github.com/epicodus-lessons/rails-api-docker-template).
 
-* Ruby version
+Next, run `$ docker-compose up` on this repository and navigate to:
 
-* System dependencies
+```
+http://localhost:3001/quotes
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This will trigger an API call to the Rails API at [rails-api-docker-template](https://github.com/epicodus-lessons/rails-api-docker-template) provided that you've followed the instructions for that project to run the API application.
