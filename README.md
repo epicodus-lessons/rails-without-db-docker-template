@@ -21,3 +21,17 @@ RUN sed -i -e 's/\r$//' /usr/bin/entrypoint.sh
 ```
 
 This line switches the line ending format so it works correctly with Windows. (Note that if the line above is uncommented, the script won't run correctly with Mac machines.)
+
+### Making API Calls to a Dockerized Rails API
+
+In order to make API calls to a Rails API running in a Docker container, we need to use `host.docker.internal` in the query string instead of `localhost`. For instance, if we'd normally make an API call to a `quotes` endpoint like this:
+
+```
+http://localhost:3000/quotes
+```
+
+We need to do the following in our API-consuming Rails application instead:
+
+```
+http://host.docker.internal:3000/quotes
+```
